@@ -1,0 +1,33 @@
+{
+  "name": "pphlx/pphlx",
+  "description": "High-performance Monolithic Web Compiler and PHP Hydration Runtime",
+  "type": "library",
+  "license": "MIT",
+  "authors": [
+    {
+      "name": "PPHLX",
+      "homepage": "https://pphlx.org"
+    }
+  ],
+  "require": {
+    "php": ">=7.4"
+  },
+  "autoload": {
+    "psr-4": {
+      "PPHLX\\": "src/"
+    }
+  },
+  "bin": [
+    "bin/pphlx"
+  ],
+  "keywords": [
+    "php",
+    "compiler",
+    "webassembly",
+    "islands",
+    "hydration",
+    "react",
+    "vue",
+    "svelte"
+  ]
+}

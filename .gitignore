@@ -1,0 +1,21 @@
+# PHP / Composer
+/vendor/
+composer.lock
+
+# IDE / Editors
+.idea/
+.vscode/
+*.suo
+*.ntvs*
+*.njsproj
+*.sln
+*.sw?
+
+# OS / Systems
+.DS_Store
+Thumbs.db
+
+# Temp Files
+*.log
+tmp/
+temp/
