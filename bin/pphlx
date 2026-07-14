@@ -1,0 +1,27 @@
+#!/usr/bin/env php
+<?php
+
+$wasmPath = dirname(__DIR__) . '/lib/pphlx.wasm';
+$jsRunnerPath = dirname(__DIR__) . '/bin/pphlx.js';
+
+// Get CLI arguments passed to this script
+$args = array_slice($argv, 1);
+$argsStr = implode(' ', array_map('escapeshellarg', $args));
+
+// Try executing via Node.js
+$nodeVersion = @shell_exec('node -v 2>&1');
+if ($nodeVersion && strpos(trim($nodeVersion), 'v') === 0) {
+    passthru('node ' . escapeshellarg($jsRunnerPath) . ' ' . $argsStr, $exitCode);
+    exit($exitCode);
+}
+
+// Fallback: Try executing directly via Wasmer CLI
+$wasmerVersion = @shell_exec('wasmer --version 2>&1');
+if ($wasmerVersion && strpos($wasmerVersion, 'wasmer') !== false) {
+    passthru('wasmer run ' . escapeshellarg($wasmPath) . ' --dir=. -- ' . $argsStr, $exitCode);
+    exit($exitCode);
+}
+
+fwrite(STDERR, "PPHLX Compiler Error: A WebAssembly execution runtime (Node.js or Wasmer) is required on your host system to run the compiler.\n");
+fwrite(STDERR, "Please install Node.js (recommended) or Wasmer to compile templates.\n");
+exit(1);
