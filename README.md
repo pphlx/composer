@@ -23,7 +23,7 @@ composer require pphlx/pphlx
 
 ## Compilation CLI
 
-This package registers a vendor binary executable. You can run the compiler from the root of your project:
+This package registers a vendor binary executable. You can run the compiler from the root of your PHP project:
 
 ```bash
 # Initialize project configurations
@@ -32,8 +32,14 @@ vendor/bin/pphlx init
 # Start local hot-reload compiler server
 vendor/bin/pphlx dev
 
+# Run diagnostic template validation
+vendor/bin/pphlx check
+
 # Compile templates to production-ready PHP files
-vendor/bin/pphlx build
+vendor/bin/pphlx
+
+# Preview the compiled production site locally
+vendor/bin/pphlx preview
 ```
 
 ---
