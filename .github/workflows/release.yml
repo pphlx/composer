@@ -1,0 +1,29 @@
+name: Release Composer Package
+
+on:
+  release:
+    types: [published]
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    permissions:
+      contents: write
+      id-token: write
+      attestations: write
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v4
+
+      - name: Create release archive zip
+        run: zip -r pphlx-composer.zip . -x "*.git*" "*vendor*"
+
+      - name: Generate SLSA Build Attestation
+        uses: actions/attest-build-provenance@v1
+        with:
+          subject-path: 'pphlx-composer.zip'
+
+      - name: Upload Zip to Release
+        run: gh release upload ${{ github.event.release.tag_name }} pphlx-composer.zip
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
