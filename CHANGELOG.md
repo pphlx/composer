@@ -5,6 +5,14 @@ All notable changes to the PPHLX Composer package will be documented in this fil
 The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/),
 and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0.html).
 
+## [1.1.3] - 2026-07-24
+
+### Added
+- **Smart Dev Server HTTP Routing**: `pphlx dev` automatically serves `/` and `/index.php` with `Content-Type: text/html; charset=utf-8`, preventing unwanted file downloads on non-PHP host machines.
+- **Static Asset Copying**: `pphlx build` and `pphlx dev` automatically copy `public/*` static assets directly into `outDir` (`dist/`).
+
+---
+
 ## [1.1.2] - 2026-07-24
 
 ### Added
