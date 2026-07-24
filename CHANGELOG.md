@@ -5,6 +5,14 @@ All notable changes to the PPHLX Composer package will be documented in this fil
 The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/),
 and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0.html).
 
+## [1.1.2] - 2026-07-24
+
+### Added
+- **Embedded Binary Scaffolder Engine**: Packed starter template (`src/index.pphx`, `src/layouts/Layout.pphx`, `src/assets/pphlx.svg`, `public/favicon.svg`, `public/favicon.ico`) directly inside native binaries (`pphlx-win.exe`, `pphlx-linux`, `pphlx-macos`) and `pphlx.wasm`. Zero network latency and 100% offline project initialization.
+- **Dual Favicon & README Scaffolding**: `pphlx init` automatically writes `public/favicon.ico` (base64 binary), `public/favicon.svg`, and project `README.md` with complete directory tree diagrams.
+
+---
+
 ## [1.1.1] - 2026-07-24
 
 ### Added
