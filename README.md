@@ -1,11 +1,21 @@
 # PPHLX for PHP (Composer Integration)
 
-[![Latest Stable Version](https://poser.pugx.org/pphlx/pphlx/v/stable)](https://packagist.org/packages/pphlx/pphlx)
-[![License](https://poser.pugx.org/pphlx/pphlx/license)](https://packagist.org/packages/pphlx/pphlx)
+<br/>
+<p align="center">
+  <img src=".github/assets/banner.webp" alt="Bring Your Own UI Framework">
+  <br/><br/>
+  <a href="https://pphlx.org">PPHLX</a> is the high-performance monolithic compiler for modern PHP web applications.
+  <br/>
+  Build component-driven PHP apps with React, Vue, Svelte, or pure PHP templates — with zero Node.js runtime in production.
+  <br/><br/>
+</p>
 
-> Modern Web Component Compiler & PHP Hydration Engine. WebAssembly (WASI) powered.
+<p align="center">
+  <a href="https://packagist.org/packages/pphlx/pphlx"><img src="https://poser.pugx.org/pphlx/pphlx/v/stable" alt="Latest Stable Version"></a>
+  <a href="https://packagist.org/packages/pphlx/pphlx"><img src="https://poser.pugx.org/pphlx/pphlx/license" alt="License"></a>
+</p>
 
-Official Packagist package for **PPHLX** — enabling you to compile PPHLX (`.pphx`) templates and render hydrated multi-framework layouts natively inside PHP applications (like Laravel, WordPress, or standalone scripts).
+Official Packagist package for **PPHLX**. Enables you to compile `.pphx` templates and render hydrated multi-framework component layouts natively inside any PHP application (Laravel, WordPress, or custom scripts).
 
 ---
 
