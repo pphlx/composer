@@ -5,6 +5,18 @@ All notable changes to the PPHLX Composer package will be documented in this fil
 The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/),
 and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0.html).
 
+## [1.1.8] - 2026-09-05
+
+### Added
+- **Directives Compilation Engine (`set:html`, `set:text`, `is:raw`, `is:inline`)**:
+  - `set:html`: Reactive unescaped HTML content binding (`<div set:html="$rawHtml"></div>` ➔ `<?php echo $rawHtml; ?>`).
+  - `set:text`: Safe text rendering escaping HTML entities via `htmlspecialchars` (`<span set:text="$escapedText"></span>` ➔ `<?php echo htmlspecialchars($escapedText); ?>`).
+  - `is:raw`: Retains literal template contents without parsing expressions.
+  - `is:inline`: Keeps inline style and script blocks unbundled inside components.
+- **Multi-Platform Binary Packaging Sync**: Synced all platform binaries (`pphlx-win.exe`, `pphlx-linux`, `pphlx-macos`, `pphlx.wasm`) inside `pphlx-composer/bin/` with compiler version `v1.1.8`.
+
+---
+
 ## [1.1.7] - 2026-07-31
 
 ### Fixed
